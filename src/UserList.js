@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import App from "./App";
 import React from 'react';
 import axios from "axios";
 function Users()
@@ -55,7 +54,7 @@ function Users()
     function deleteEmp_click(eno)
     {
         let tempArray = [...empsArray];   
-        let index  = tempArray.findIndex( item => item.id == eno );
+        let index  = tempArray.findIndex( item => item.id === eno );
         tempArray.splice(index, 1);
         setEmpsArray(tempArray); 
     }
@@ -63,7 +62,7 @@ function Users()
     function selectEmp_click(eno)
     {
         let tempArray = [...empsArray];   
-        let empObj  = tempArray.find( item => item.id == eno );
+        let empObj  = tempArray.find( item => item.id === eno );
        // alert(  JSON.stringify(empObj) );
 
        setEmpno(empObj.id);
@@ -83,7 +82,7 @@ function Users()
        updateEmp.phone = phone;
 
        let tempArray = [...empsArray];   
-       let index  = tempArray.findIndex( item => item.id == eno );
+       let index  = tempArray.findIndex( item => item.id === eno );
 console.log(index);
 tempArray[index] = updateEmp;
 
