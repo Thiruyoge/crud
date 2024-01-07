@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Users from "./UserList";
 
 function  App()
